@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复数旋转可视化</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>复数旋转可视化</h1>
+
+    <div class="controls">
+        <label for="real">实部 (a):</label>
+        <input type="number" id="real" value="1" step="0.1">
+
+        <label for="imaginary">虚部 (b):</label>
+        <input type="number" id="imaginary" value="1" step="0.1">
+
+        <label for="angle">旋转角度 (θ 度):</label>
+        <input type="number" id="angle" value="45" step="1" disabled>
+        <button id="confirmComplexButton">确定复数</button>
+        <button id="confirmRotateButton" disabled>确定旋转</button>
+
+        <hr style="margin: 15px 0;">
+
+        <label for="multiplierReal">乘数实部 (c):</label>
+        <input type="number" id="multiplierReal" value="0" step="0.1" disabled>
+
+        <label for="multiplierImaginary">乘数虚部 (d):</label>
+        <input type="number" id="multiplierImaginary" value="1" step="0.1" disabled>
+
+        <button id="confirmMultiplyButton" disabled>乘以复数</button>
+        <button id="resetAllButton" style="margin-left: 15px;">全部重置</button>
+    </div>
+
+    <canvas id="complexCanvas" width="500" height="500"></canvas>
+
+    <div class="info">
+        <p>初始复数 (z): <span id="initialComplex"></span></p>
+        <p>旋转角度 (θ): <span id="rotationAngle"></span></p>
+        <p>旋转后复数 (z'): <span id="rotatedComplex"></span></p>
+        <hr style="margin: 10px 0;">
+        <p>乘数复数 (w): <span id="multiplierComplex"></span></p>
+        <p>乘积复数 (z * w): <span id="productComplex"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
